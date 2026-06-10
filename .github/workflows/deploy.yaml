@@ -3,16 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # or master, depending on your default branch
+      - main
 
-# -------------------------------------------------------------
-# ADD THIS BLOCK BELOW
-# -------------------------------------------------------------
 permissions:
   contents: read
   pages: write
   id-token: write
-# -------------------------------------------------------------
 
 concurrency:
   group: "pages"
@@ -28,13 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ... your build steps here (e.g., setup node, build site) ...
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # or your build output directory like './dist'
+          path: .
 
-      name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # or v5
+        uses: actions/deploy-pages@v5
