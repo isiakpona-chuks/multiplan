@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>MULTIPLAN Gallery</title>
+
+<style>
+
+:root{
+--primary:#1f6f3d;
+--secondary:#f4f8f3;
+--accent:#ffc107;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:var(--secondary);
+color:#333;
+}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
+background-size:cover;
+background-position:center;
+padding:80px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+line-height:1.7;
+}
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:40px 20px;
+background:white;
+}
+
+.stat{
+background:#fff;
+padding:20px;
+border-radius:12px;
+min-width:180px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.stat h2{
+color:var(--primary);
+font-size:2rem;
+}
+
+.filter-bar{
+padding:30px;
+text-align:center;
+}
+
+.filter-btn{
+padding:10px 20px;
+border:none;
+margin:5px;
+border-radius:30px;
+cursor:pointer;
+background:#ddd;
+}
+
+.filter-btn.active{
+background:var(--primary);
+color:white;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+cursor:pointer;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card-content h3{
+color:var(--primary);
+margin-bottom:8px;
+}
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.92);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.cta{
+background:var(--primary);
+color:white;
+text-align:center;
+padding:50px 20px;
+margin-top:40px;
+}
+
+.whatsapp-btn{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2rem;
+}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+<h1>MULTIPLAN AGRO CULTURE FARMS LTD</h1>
+<p>
+Transforming agriculture through mechanization,
+innovation and sustainable farming practices.
+</p>
+</section>
+
+<section class="stats">
+<div class="stat">
+<h2>3+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>500+</h2>
+<p>Hectares Cultivated</p>
+</div>
+
+<div class="stat">
+<h2>20+</h2>
+<p>Farmers Served</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Commitment</p>
+</div>
+</section>
+
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all">All</button>
+<button class="filter-btn" data-filter="mechanization">Mechanization</button>
+<button class="filter-btn" data-filter="crop">Crop Production</button>
+<button class="filter-btn" data-filter="training">Training</button>
+<button class="filter-btn" data-filter="harvest">Harvesting</button>
+</div>
+
+<section class="gallery">
+
+<div class="card mechanization">
+<img src="tractor.jpg">
+<div class="card-content">
+<h3>Farm Mechanization</h3>
+<p>Modern tractor operations.</p>
+</div>
+</div>
+
+<div class="card crop">
+<img src="maize.jpg">
+<div class="card-content">
+<h3>Crop Production</h3>
+<p>Healthy maize cultivation.</p>
+</div>
+</div>
+
+<div class="card training">
+<img src="training.jpg">
+<div class="card-content">
+<h3>Training Program</h3>
+<p>Capacity building sessions.</p>
+</div>
+</div>
+
+<div class="card harvest">
+<img src="harvesting.jpg">
+<div class="card-content">
+<h3>Harvest Operations</h3>
+<p>Efficient harvesting activities.</p>
+</div>
+</div>
+
+<div class="card crop">
+<img src="cassava.jpg">
+<div class="card-content">
+<h3>Cassava Production</h3>
+<p>Sustainable cassava farming.</p>
+</div>
+</div>
+
+<div class="card mechanization">
+<img src="landpreparation.jpg">
+<div class="card-content">
+<h3>Land Preparation</h3>
+<p>Precision land clearing.</p>
+</div>
+</div>
+
+<div class="card mechanization">
+<img src="landpreparation.jpg">
+<div class="card-content">
+<h3>Land Preparation</h3>
+<p>Precision land clearing.</p>
+</div>
+</div>
+
+<div class="card mechanization">
+<img src="landpreparation.jpg">
+<div class="card-content">
+<h3>Land Preparation</h3>
+<p>Precision land clearing.</p>
+</div>
+</div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+<span class="close">&times;</span>
+<img id="lightbox-img">
+</div>
+
+<section class="cta">
+<h2>Partner With MULTIPLAN Today</h2>
+<p>
+Let's work together to improve agricultural productivity.
+</p>
+
+<a
+class="whatsapp-btn"
+href="https://wa.me/2348034518610"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</section>
+
+<script>
+
+const filterBtns=document.querySelectorAll('.filter-btn');
+const cards=document.querySelectorAll('.card');
+
+filterBtns.forEach(btn=>{
+btn.addEventListener('click',()=>{
+
+filterBtns.forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+
+const filter=btn.dataset.filter;
+
+cards.forEach(card=>{
+
+if(filter==="all"){
+card.style.display='block';
+}
+else if(card.classList.contains(filter)){
+card.style.display='block';
+}
+else{
+card.style.display='none';
+}
+
+});
+
+});
+});
+
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+
+document.querySelectorAll('.card img').forEach(img=>{
+
+img.addEventListener('click',()=>{
+
+lightbox.style.display='flex';
+lightboxImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener('click',()=>{
+lightbox.style.display='none';
+});
+
+</script>
+
+</body>
+</html>
