@@ -1,133 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/gallery.js" defer></script>
-<title>MULTIPLAN Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLAN AGRO CULTURE FARMS LTD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<section class="hero">
-<h1>MULTIPLAN AGRO CULTURE FARMS LTD</h1>
-<p>
-Transforming agriculture through mechanization,
-innovation and sustainable farming practices.
-</p>
+<header>
+    <nav class="navbar">
+    <div class="logo">
+    <img src="images/logo.png" alt="MULTIPLAN Logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<section class="page-hero gallery-hero">
+
+    <h1>Our Gallery</h1>
+
+    <p>
+        Explore our agricultural activities, mechanization projects,
+        crop production, training programs, livestock operations,
+        and sustainable farming initiatives.
+    </p>
+
 </section>
-
+</header>
 <section class="stats">
-<div class="stat">
-<h2>3+</h2>
-<p>Years Experience</p>
-</div>
 
-<div class="stat">
-<h2>50+</h2>
-<p>Hectares Cultivated</p>
-</div>
+    <div class="stat-card">
+        <h2>1+</h2>
+        <p>Years Experience</p>
+    </div>
 
-<div class="stat">
-<h2>20+</h2>
-<p>Farmers Served</p>
-</div>
+    <div class="stat-card">
+        <h2>50</h2>
+        <p>Hectares Cultivated</p>
+    </div>
 
-<div class="stat">
-<h2>100%</h2>
-<p>Commitment</p>
-</div>
+    <div class="stat-card">
+        <h2>10</h2>
+        <p>Farmers Supported</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>4</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>4</h2>
+        <p>States Reached</p>
+    </div>
+
 </section>
 
 <div class="filter-bar">
-<button class="filter-btn active" data-filter="all">All</button>
-<button class="filter-btn" data-filter="mechanization">Mechanization</button>
-<button class="filter-btn" data-filter="crop">Crop Production</button>
-<button class="filter-btn" data-filter="training">Training</button>
-<button class="filter-btn" data-filter="harvest">Harvesting</button>
-</div>
 
-<section class="gallery">
+<button class="filter-btn active" data-filter="all">
+All
+</button>
 
-<div class="card mechanization">
-<img src="images/tractor.jpg" alt="Farm tractor">
-<div class="card-content">
-<h3>Farm Mechanization</h3>
-<p>Modern tractor operations.</p>
-</div>
-</div>
+<button class="filter-btn" data-filter="mechanization">
+Mechanization
+</button>
 
-<div class="card crop">
-<img src="images/maize.jpg" alt="Maize crop">
-<div class="card-content">
-<h3>Crop Production</h3>
-<p>Healthy maize cultivation.</p>
-</div>
-</div>
+<button class="filter-btn" data-filter="crop">
+Crop Production
+</button>
 
-<div class="card training">
-<img src="images/training.jpg" alt="Training session">
-<div class="card-content">
-<h3>Training Program</h3>
-<p>Capacity building sessions.</p>
-</div>
-</div>
+<button class="filter-btn" data-filter="livestock">
+Livestock
+</button>
 
-<div class="card harvest">
-<img src="images/harvest.jpg" alt="Harvesting activity">
-<div class="card-content">
-<h3>Harvest Operations</h3>
-<p>Efficient harvesting activities.</p>
-</div>
+<button class="filter-btn" data-filter="aquatic">
+Aquatic
+</button>
+
+<button class="filter-btn" data-filter="training">
+Training
+</button>
+
 </div>
 
 <div class="card crop">
-<img src="images/cassava.jpg" alt="Cassava field">
-<div class="card-content">
-<h3>Cassava Production</h3>
-<p>Sustainable cassava farming.</p>
-</div>
+
+    <img src="images/maize.jpg" alt="Maize Production">
+
+    <div class="card-content">
+
+        <h3>Maize Production</h3>
+
+        <p>
+            Sustainable maize cultivation supporting food security.
+        </p>
+
+    </div>
+
 </div>
 
-<div class="card mechanization">
-<img src="images/landpreparation.jpg" alt="Land preparation">
-<div class="card-content">
-<h3>Land Preparation</h3>
-<p>Precision land clearing.</p>
-</div>
-</div>
+<section class="gallery-cta">
 
-<div class="card mechanization">
-<img src="images/landpreparation.jpg" alt="Land preparation">
-<div class="card-content">
-<h3>Land Preparation</h3>
-<p>Precision land clearing.</p>
-</div>
-</div>
+    <h2>Experience Agriculture the MULTIPLAN Way</h2>
+
+    <p>
+        From crop cultivation and mechanization to livestock and
+        aquaculture, we are committed to delivering sustainable
+        agricultural solutions.
+    </p>
+
+    <a href="contact.html" class="btn-secondary">
+        Contact Us
+    </a>
 
 </section>
 
-<div class="lightbox" id="lightbox">
-<span class="close">&times;</span>
-<img id="lightbox-img">
-</div>
+<!-- FOOTER -->
 
-<section class="cta">
-<h2>Partner With MULTIPLAN Today</h2>
-<p>
-Let's work together to improve agricultural productivity.
-</p>
+<footer class="site-footer">
 
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <img src="images/logo.png" alt="MULTIPLAN Logo" class="footer-logo">
+
+            <p>
+                Cultivating a Greener Tomorrow through sustainable
+                agriculture, innovation, mechanization, and farmer empowerment.
+            </p>
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Contact Information</h3>
+
+            <p>
+                Ate No 1 Akpagidigbo Idah Road,
+                Ofu LGA, Kogi State, Nigeria
+            </p>
+
+            <p>+2347014825857</p>
+            <p>+23407055306574</p>
+
+            <p>
+                info@multiplanagroculturefarmsltd.com
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MULTIPLAN AGRO CULTURE FARMS LTD.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
 <a
-class="whatsapp-btn"
-href="https://wa.me/2348034518610"
+href="https://wa.me/2347014825857"
+class="floating-whatsapp"
 target="_blank">
-Chat on WhatsApp
+
+<i class="fab fa-whatsapp"></i>
+
+<span class="whatsapp-text">
+Chat With Us
+</span>
+
 </a>
-
-</section>
-
-
 </body>
+
 </html>
