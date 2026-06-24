@@ -1,5 +1,11 @@
+/*=====================================
+  MULTIPLAN WEBSITE
+=====================================*/
+
+console.log("MULTIPLAN Website Loaded");
 
 
+/* filters for feature section */
 const filterBtns=document.querySelectorAll('.filter-btn');
 const cards=document.querySelectorAll('.card');
 
@@ -47,12 +53,17 @@ lightbox.style.display='none';
 });
 
 
-const hamburger = document.querySelector(".hamburger");
 
-const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click",()=>{
 
-    navLinks.classList.toggle("active");
 
-});
+
+/* NAVIGATION */
+
+/* COUNTERS */
+
+/* SCROLL ANIMATIONS */
+
+/* GALLERY */
+
+/* CONTACT */

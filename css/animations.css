@@ -1,0 +1,106 @@
+.hero{
+
+    transition:background-image .8s ease;
+
+}
+
+.hero-content{
+
+    animation:fadeUp .8s;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+100%{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+.fade-up{
+
+animation:fadeUp .8s ease;
+
+}
+
+.fade-delay-1{
+
+    animation-delay:.15s;
+
+}
+
+.fade-delay-2{
+
+    animation-delay:.35s;
+
+}
+
+.fade-delay-3{
+
+    animation-delay:.55s;
+
+}
+
+.fade-delay-4{
+
+    animation-delay:.75s;
+
+}
+
+.fade-delay-5{
+
+    animation-delay:.95s;
+
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 
+        opacity 900ms cubic-bezier(0.25, 0.1, 0.25, 1),
+        transform 900ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes heroZoom{
+
+0%{
+
+background-size:100%;
+
+}
+
+100%{
+
+background-size:108%;
+
+}
+
+}

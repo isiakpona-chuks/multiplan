@@ -1,64 +1,75 @@
+/*=====================================
+  GALLERY FILTER
+=====================================*/
+
 const filterButtons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".card");
 
-filterButtons.forEach(button=>{
+if (filterButtons.length && cards.length) {
 
-button.addEventListener("click",()=>{
+    filterButtons.forEach(button => {
 
-document.querySelector(".active").classList.remove("active");
-button.classList.add("active");
+        button.addEventListener("click", () => {
 
-const filter = button.dataset.filter;
+            document
+                .querySelector(".filter-btn.active")
+                ?.classList.remove("active");
 
-cards.forEach(card=>{
+            button.classList.add("active");
 
-if(filter==="all"){
+            const filter = button.dataset.filter;
 
-card.style.display="block";
+            cards.forEach(card => {
 
-}else{
+                card.style.display =
+                    filter === "all" || card.classList.contains(filter)
+                        ? "block"
+                        : "none";
 
-card.style.display =
-card.classList.contains(filter)
-? "block"
-: "none";
+            });
 
-}
+        });
 
-});
-
-});
-
-});
-
-const images=document.querySelectorAll(".card img");
-const lightbox=document.getElementById("lightbox");
-const lightboxImg=document.getElementById("lightbox-img");
-const close=document.querySelector(".close");
-
-images.forEach(img=>{
-
-img.onclick=()=>{
-
-lightbox.style.display="flex";
-lightboxImg.src=img.src;
-
-};
-
-});
-
-close.onclick=()=>{
-
-lightbox.style.display="none";
-
-};
-
-lightbox.onclick=e=>{
-
-if(e.target===lightbox){
-
-lightbox.style.display="none";
+    });
 
 }
 
-};
+/*=====================================
+  LIGHTBOX
+=====================================*/
+
+const images = document.querySelectorAll(".card img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const close = document.querySelector(".close");
+
+if (images.length && lightbox && lightboxImg && close) {
+
+    images.forEach(img => {
+
+        img.addEventListener("click", () => {
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+
+        });
+
+    });
+
+    close.addEventListener("click", () => {
+
+        lightbox.style.display = "none";
+
+    });
+
+    lightbox.addEventListener("click", e => {
+
+        if (e.target === lightbox) {
+
+            lightbox.style.display = "none";
+
+        }
+
+    });
+
+}
