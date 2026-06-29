@@ -10,8 +10,8 @@ const description = document.querySelector('.hero-description');
 const buttons = document.querySelector('.hero-buttons');
 const dotsContainer = document.getElementById('heroDots');
 
-const nextBtn = document.getElementById('nextSlide');
-const prevBtn = document.getElementById('prevSlide');
+const heroNextBtn = document.getElementById('nextSlide');
+const heroPrevBtn = document.getElementById('prevSlide');
 
 let currentSlide = 0;
 let sliderInterval = null;
@@ -121,8 +121,8 @@ function initHeroSlider() {
     updateActiveDot();
 
     // Button listeners
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if (prevBtn) prevBtn.addEventListener('click', previousSlide);
+    if (heroNextBtn) heroNextBtn.addEventListener('click', nextSlide);
+    if (heroPrevBtn) heroPrevBtn.addEventListener('click', previousSlide);
 
     // Auto-slide
     startAutoSlide();

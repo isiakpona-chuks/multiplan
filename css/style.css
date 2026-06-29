@@ -286,19 +286,7 @@ ul{
 }
 
 
-/* Hamburger */
 
-.hamburger{
-
-    display:none;
-
-    flex-direction:column;
-
-    cursor:pointer;
-
-    gap:6px;
-
-}
 
 .nav-container{
     width:100%;
@@ -312,21 +300,9 @@ ul{
     padding:15px 30px;
 }
 
-.hamburger span{
-
-    width:28px;
-
-    height:3px;
-
-    background:#1f6f3d;
-
-    border-radius:5px;
-
-    transition:.3s;
-
-}
-
-/* Mobile Menu */
+/*=====================================
+HAMBURGER MENU
+=====================================*/
 
 .hamburger{
 
@@ -334,10 +310,25 @@ ul{
 
     flex-direction:column;
 
-    cursor:pointer;
+    justify-content:center;
+    align-items:center;
 
     gap:5px;
 
+    cursor:pointer;
+
+    padding:10px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:10px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.2);
+
+    z-index:1001;
 }
 
 .hamburger span{
@@ -348,8 +339,10 @@ ul{
 
     background:white;
 
-    border-radius:3px;
+    border-radius:5px;
 
+    transition:.3s;
+
+    box-shadow:
+        0 1px 3px rgba(0,0,0,.5);
 }
-
-
