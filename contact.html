@@ -18,7 +18,8 @@
 
     <meta property="og:title" content="MULTIPLAN AGRO CULTURE FARMS LTD">
     <meta property="og:description" content="Cultivating a greener tomorrow through sustainable agriculture.">
-    <title>MULTIPLAN AGRO CULTURE FARMS LTD</title>
+    <meta property="og:image" content="images/logo.png">
+    <title> Contact | MULTIPLAN AGRO CULTURE FARMS LTD</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -30,6 +31,7 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/contact.js" defer></script>
+    <script src="js/form-submit.js" defer></script>
     <script src="js/counter.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <script src="js/scroll.js" defer></script>
@@ -54,6 +56,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="export.html">Export</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -139,6 +142,7 @@
                 </p>
 
                 <p>
+                
                     8:00 AM - 5:00 PM
                 </p>
 
@@ -154,20 +158,21 @@
 
         <form class="contact-form" id="contactForm">
 
-            <input type="text" placeholder="Full Name" required>
+            <input type="text" name="name" placeholder="Full Name" required>
 
-            <input type="email" placeholder="Email Address" required>
+            <input type="email" name="email" placeholder="Email Address" required>
 
-            <input type="tel" placeholder="Phone Number">
+            <input type="tel" name="phone" placeholder="Phone Number">
 
-            <input type="text" placeholder="Subject" required>
+            <input type="text" name="subject" placeholder="Subject" required>
 
-            <textarea rows="6" placeholder="Your Message" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required>
         </textarea>
 
             <button type="submit" class="btn-primary">
                 Send Message
             </button>
+            <div class="form-message" role="status" aria-live="polite"></div>
 
         </form>
 
@@ -271,6 +276,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="export.html">Export</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
