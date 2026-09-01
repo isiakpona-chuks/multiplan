@@ -36,7 +36,13 @@ function readBody(request) {
                 request.destroy();
             }
         });
-        request.on("end", () => resolve(JSON.parse(body || "{}")));
+        request.on("end", () => {
+            try {
+                resolve(JSON.parse(body || "{}"));
+            } catch (error) {
+                reject(new Error("Invalid JSON in request body."));
+            }
+        });
         request.on("error", reject);
     });
 }
@@ -65,9 +71,19 @@ async function handleEmail(request, response) {
             .map(([key, value]) => `${key}: ${value}`)
             .join("\n");
 
+        const fromEmail = (smtpUser || "").trim();
+        if (!fromEmail || !fromEmail.includes("@")) {
+            throw new Error("Email service sender address is not configured correctly.");
+        }
+
+        const toEmail = (process.env.MAIL_TO || smtpUser || "").trim();
+        if (!toEmail || !toEmail.includes("@")) {
+            throw new Error("Email service recipient address is not configured correctly.");
+        }
+
         await transporter.sendMail({
-            from: process.env.SMTP_USER,
-            to: process.env.MAIL_TO || process.env.SMTP_USER,
+            from: fromEmail,
+            to: toEmail,
             replyTo: data.email,
             subject,
             text: details
