@@ -1296,3 +1296,733 @@ CONTACT CTA
     line-height:1.8;
 
 }
+
+/*=====================================
+EXPORT HERO
+=====================================*/
+
+.export-hero{
+
+    text-align:center;
+
+    padding:100px 20px 70px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
+    ),
+    url("../images/hero/hero-gallery.avif") no-repeat;
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+}
+
+.export-hero h1{
+
+    font-size:3.2rem;
+
+    margin:20px auto;
+
+    max-width:900px;
+
+}
+
+.export-hero p{
+
+    max-width:820px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+}
+
+/*=====================================
+EXPORT INTRO
+=====================================*/
+
+.export-intro{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.export-intro h2{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.export-intro p{
+
+    max-width:920px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+/*=====================================
+EXPORT PRODUCTS
+=====================================*/
+
+.export-products{
+
+    padding:70px 10%;
+
+}
+
+.export-products h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.export-section-intro{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 45px;
+
+    color:#555;
+
+}
+
+.export-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:28px;
+
+}
+
+.export-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.export-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.export-card img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+.export-card-content{
+
+    padding:22px;
+
+}
+
+.export-card-content h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.export-card-content p{
+
+    color:#555;
+
+    margin-bottom:14px;
+
+}
+
+.export-card-content ul{
+
+    list-style:disc;
+
+    padding-left:20px;
+
+    margin-bottom:18px;
+
+}
+
+.export-card-content li{
+
+    margin-bottom:8px;
+
+    color:#444;
+
+    line-height:1.6;
+
+}
+
+/*=====================================
+EXPORT WHY US
+=====================================*/
+
+.export-why{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+    background:#f8faf8;
+
+}
+
+.export-why h2{
+
+    color:var(--primary);
+
+    margin-bottom:40px;
+
+}
+
+.export-why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.export-why-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.export-why-card i{
+
+    font-size:2rem;
+
+    color:var(--accent);
+
+    margin-bottom:15px;
+
+}
+
+.export-why-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.export-why-card p{
+
+    color:#555;
+
+}
+
+/*=====================================
+EXPORT PROCESS
+=====================================*/
+
+.export-process{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+}
+
+.export-process h2{
+
+    color:var(--primary);
+
+    margin-bottom:35px;
+
+}
+
+.export-process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+
+}
+
+.process-step{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:20px 14px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    font-weight:600;
+
+    color:var(--primary);
+
+}
+
+.process-step span{
+
+    display:block;
+
+    width:36px;
+
+    height:36px;
+
+    margin:0 auto 10px;
+
+    line-height:36px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/*=====================================
+EXPORT MARKETS
+=====================================*/
+
+.export-markets{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+    background:#f8faf8;
+
+}
+
+.export-markets h2{
+
+    color:var(--primary);
+
+    margin-bottom:18px;
+
+}
+
+.export-markets p{
+
+    max-width:850px;
+
+    margin:0 auto 30px;
+
+    color:#555;
+
+}
+
+.market-tags{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.market-tags span{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:1px solid #dfe9df;
+
+    border-radius:50px;
+
+    padding:10px 16px;
+
+    font-weight:600;
+
+}
+
+/*=====================================
+EXPORT CERTIFICATIONS
+=====================================*/
+
+.export-certifications{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+}
+
+.export-certifications h2{
+
+    color:var(--primary);
+
+    margin-bottom:35px;
+
+}
+
+.export-cert-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:16px;
+
+}
+
+.export-cert-grid div{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    font-weight:600;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+/*=====================================
+EXPORT FAQ
+=====================================*/
+
+.export-faq{
+
+    padding:70px 10%;
+
+    background:#f8faf8;
+
+}
+
+.export-faq h2{
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:35px;
+
+}
+
+.export-faq-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+.export-faq-grid article{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:22px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.export-faq-grid h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+    font-size:1.05rem;
+
+}
+
+.export-faq-grid p{
+
+    color:#555;
+
+}
+
+/*=====================================
+EXPORT INQUIRY FORM
+=====================================*/
+
+.export-inquiry{
+
+    padding:70px 10%;
+
+    text-align:center;
+
+}
+
+.export-inquiry h2{
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+.export-inquiry p{
+
+    margin-bottom:30px;
+
+    color:#555;
+
+}
+
+.export-form{
+
+    max-width:950px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:14px;
+
+    margin-bottom:14px;
+
+}
+
+.export-form input,
+.export-form textarea{
+
+    width:100%;
+
+    border:1px solid #d8e2d8;
+
+    border-radius:10px;
+
+    padding:14px;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+}
+
+.export-form textarea{
+
+    resize:vertical;
+
+    margin-bottom:18px;
+
+}
+
+/*=====================================
+EXPORT CTA
+=====================================*/
+
+.export-cta{
+
+    background:var(--primary);
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+.export-cta h2{
+
+    font-size:2.3rem;
+
+    margin-bottom:15px;
+
+}
+
+.export-cta p{
+
+    max-width:800px;
+
+    margin:0 auto 30px;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:900px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .export-hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .export-cta h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/*=====================================
+UNIFIED INNER PAGE HERO ADJUSTMENTS
+=====================================*/
+
+.about-hero,
+.services-hero,
+.products-hero,
+.gallery-hero,
+.contact-hero,
+.export-hero{
+
+    min-height:55vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:120px 20px 80px;
+
+    text-align:center;
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.about-hero h1,
+.services-hero h1,
+.products-hero h1,
+.gallery-hero h1,
+.contact-hero h1,
+.export-hero h1{
+
+    font-size:clamp(2rem,4.2vw,3.4rem);
+
+    line-height:1.2;
+
+    max-width:920px;
+
+    margin:14px auto;
+
+}
+
+.about-hero p,
+.services-hero p,
+.products-hero p,
+.gallery-hero p,
+.contact-hero p,
+.export-hero p{
+
+    max-width:820px;
+
+    margin:0 auto;
+
+    line-height:1.85;
+
+    font-size:1.08rem;
+
+}
+
+@media(max-width:768px){
+
+    .about-hero,
+    .services-hero,
+    .products-hero,
+    .gallery-hero,
+    .contact-hero,
+    .export-hero{
+
+        min-height:50vh;
+
+        padding:110px 18px 68px;
+
+    }
+
+    .about-hero p,
+    .services-hero p,
+    .products-hero p,
+    .gallery-hero p,
+    .contact-hero p,
+    .export-hero p{
+
+        font-size:1rem;
+
+        line-height:1.75;
+
+    }
+
+}

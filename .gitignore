@@ -1,4 +1,6 @@
 .github
+.env
+node_modules
 changelog.md
 readme.md
 icons
