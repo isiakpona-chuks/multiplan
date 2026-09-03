@@ -4,6 +4,8 @@
 
 const CONFIG = {
 
+    emailApiUrl: "",
+
     company: {
         name: "MULTIPLAN AGRO CULTURE FARMS LTD",
         rc: "8232527",
