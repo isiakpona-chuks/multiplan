@@ -18,14 +18,26 @@ forms.forEach(form => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(Object.fromEntries(new FormData(form)))
             });
+
             const responseText = await response.text();
             let result = {};
+            const contentType = (response.headers.get("content-type") || "").toLowerCase();
 
             if (responseText) {
-                try {
-                    result = JSON.parse(responseText);
-                } catch {
-                    throw new Error("The email server returned an invalid response.");
+                if (contentType.includes("application/json")) {
+                    try {
+                        result = JSON.parse(responseText);
+                    } catch {
+                        throw new Error("The email server returned an invalid JSON response.");
+                    }
+                } else if (contentType.includes("text/html")) {
+                    throw new Error("The email backend is not available in this deployment. Make sure the server is running and the /api/send-email route is reachable.");
+                } else {
+                    try {
+                        result = JSON.parse(responseText);
+                    } catch {
+                        result = { error: responseText.trim() || "Email service is unavailable. Please try again later." };
+                    }
                 }
             }
 

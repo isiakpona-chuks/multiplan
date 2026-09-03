@@ -91,8 +91,14 @@ async function handleEmail(request, response) {
 
         sendJson(response, 200, { message: "Email sent." });
     } catch (error) {
-        console.error("Email sending failed:", error.message);
-        sendJson(response, 500, { error: "Unable to send your message right now." });
+        const message = error && error.message ? error.message : "Unknown email error";
+        console.error("Email sending failed:", message);
+
+        const friendlyError = /invalid response|timeout|econnrefused|econnreset|auth/i.test(message)
+            ? "The mail server rejected the connection or credentials. Please check the SMTP configuration."
+            : "Unable to send your message right now.";
+
+        sendJson(response, 500, { error: friendlyError });
     }
 }
 
