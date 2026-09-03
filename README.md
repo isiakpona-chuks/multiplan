@@ -43,6 +43,27 @@ variables and are never included in browser code.
 4. In GoDaddy or Microsoft 365, enable Authenticated SMTP for the mailbox.
 5. Start the site with `npm start` and open `http://localhost:3000`.
 
+### Render deployment
+
+Render does not read the local `.env` file. Add these environment variables in
+the Render web service settings, using the real mailbox values only in Render's
+secret fields:
+
+```env
+SMTP_HOST=smtpout.secureserver.net
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-mailbox@example.com
+SMTP_PASS=your-mailbox-password
+MAIL_TO=recipient@example.com
+PORT=10000
+```
+
+Save the variables and redeploy the service. `FRONTEND_ORIGIN` is only needed
+when the frontend is hosted on a different origin; for a site served directly
+from `https://multiplan.onrender.com`, leave `emailApiUrl` empty in
+`js/config.js`.
+
 The frontend and Node server must be deployed under the same origin, or the
 browser request must be configured with the server's public API URL. For a
 GitHub Pages deployment, set `emailApiUrl` in `js/config.js` to the deployed
