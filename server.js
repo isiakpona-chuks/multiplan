@@ -9,6 +9,7 @@ const port = Number(process.env.PORT || 3000);
 const root = __dirname;
 const smtpUser = process.env.SMTP_USER || process.env.email;
 const smtpPass = process.env.SMTP_PASS || process.env.password;
+const frontendOrigin = (process.env.FRONTEND_ORIGIN || "").trim();
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST || "smtpout.secureserver.net",
@@ -21,7 +22,12 @@ const transporter = nodemailer.createTransport({
 });
 
 function sendJson(response, status, body) {
-    response.writeHead(status, { "Content-Type": "application/json" });
+    const headers = { "Content-Type": "application/json" };
+    if (frontendOrigin) {
+        headers["Access-Control-Allow-Origin"] = frontendOrigin;
+        headers.Vary = "Origin";
+    }
+    response.writeHead(status, headers);
     response.end(JSON.stringify(body));
 }
 
@@ -136,7 +142,28 @@ function serveFile(request, response) {
 }
 
 const server = http.createServer((request, response) => {
-    if (request.method === "POST" && request.url === "/api/send-email") {
+    let requestPath;
+    try {
+        requestPath = new URL(request.url, "http://localhost").pathname;
+    } catch (error) {
+        response.writeHead(400);
+        return response.end("Bad request");
+    }
+
+    if (request.method === "OPTIONS" && requestPath === "/api/send-email") {
+        const headers = {
+            "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type"
+        };
+        if (frontendOrigin) {
+            headers["Access-Control-Allow-Origin"] = frontendOrigin;
+            headers.Vary = "Origin";
+        }
+        response.writeHead(204, headers);
+        return response.end();
+    }
+
+    if (request.method === "POST" && requestPath === "/api/send-email") {
         return handleEmail(request, response);
     }
 

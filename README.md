@@ -38,9 +38,13 @@ variables and are never included in browser code.
 
 1. Install dependencies with `npm install`.
 2. Copy `.env.example` to `.env` and set `SMTP_USER`, `SMTP_PASS`, and `MAIL_TO`.
-3. In GoDaddy or Microsoft 365, enable Authenticated SMTP for the mailbox.
-4. Start the site with `npm start` and open `http://localhost:3000`.
+3. Set `FRONTEND_ORIGIN` to the exact browser origin when the frontend and API
+	use different hosts.
+4. In GoDaddy or Microsoft 365, enable Authenticated SMTP for the mailbox.
+5. Start the site with `npm start` and open `http://localhost:3000`.
 
 The frontend and Node server must be deployed under the same origin, or the
-browser request must be configured with the server's public API URL. GitHub
-Pages alone cannot run the SMTP backend.
+browser request must be configured with the server's public API URL. For a
+GitHub Pages deployment, set `emailApiUrl` in `js/config.js` to the deployed
+Node.js endpoint, for example `https://api.example.com/api/send-email`.
+GitHub Pages alone cannot run the SMTP backend.

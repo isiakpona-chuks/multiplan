@@ -1,4 +1,7 @@
 const forms = document.querySelectorAll("#contactForm, #exportInquiryForm");
+const emailApiUrl = (typeof CONFIG !== "undefined" && CONFIG.emailApiUrl || "").trim();
+const emailEndpoint = emailApiUrl || "/api/send-email";
+const isStaticGithubPages = window.location.hostname.endsWith("github.io") && !emailApiUrl;
 
 forms.forEach(form => {
     form.addEventListener("submit", async event => {
@@ -13,7 +16,11 @@ forms.forEach(form => {
         message.textContent = "";
 
         try {
-            const response = await fetch("/api/send-email", {
+            if (isStaticGithubPages) {
+                throw new Error("Email service is not configured for this website yet. Set CONFIG.emailApiUrl to the public Node.js server endpoint.");
+            }
+
+            const response = await fetch(emailEndpoint, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(Object.fromEntries(new FormData(form)))
