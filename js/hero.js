@@ -109,7 +109,6 @@ function stopAutoSlide() {
 // Initialize
 function initHeroSlider() {
     if (!hero || !HERO_SLIDES?.length) {
-        console.warn('Hero slider: Missing hero element or slides data');
         return;
     }
 
