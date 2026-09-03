@@ -103,8 +103,16 @@ async function handleEmail(request, response) {
 }
 
 function serveFile(request, response) {
-    const requestedPath = request.url === "/" ? "/index.html" : request.url;
-    const filePath = path.normalize(path.join(root, requestedPath));
+    let requestedPath;
+    try {
+        requestedPath = new URL(request.url, "http://localhost").pathname;
+        requestedPath = decodeURIComponent(requestedPath);
+    } catch (error) {
+        response.writeHead(400);
+        return response.end("Bad request");
+    }
+
+    const filePath = path.normalize(path.join(root, requestedPath === "/" ? "/index.html" : requestedPath));
 
     if (!filePath.startsWith(root) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
         response.writeHead(404);
